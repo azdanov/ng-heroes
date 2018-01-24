@@ -1,4 +1,4 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
@@ -13,6 +13,7 @@ import { HeroesComponent } from "./heroes/heroes.component";
 import { InMemoryDataService } from "./in-memory-data.service";
 import { MessageService } from "./message.service";
 import { MessagesComponent } from "./messages/messages.component";
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +22,13 @@ import { MessagesComponent } from "./messages/messages.component";
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
+    HeroSearchComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClient,
+    HttpClientModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
